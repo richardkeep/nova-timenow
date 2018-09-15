@@ -7,8 +7,19 @@
     ],
     "license": "MIT",
     "require": {
-        "php": ">=7.1.0"
+        "php": ">=7.1.0",
+        "laravel/nova": "*"
     },
+    "require-dev": {
+      "orchestra/testbench": "^3.6",
+      "phpunit/phpunit": "7.1"
+    },
+      "repositories": [
+      {
+        "type": "path",
+        "url": "../nova"
+      }
+    ],
     "autoload": {
         "psr-4": {
             "Richardkeep\\NovaTimenow\\": "src/"
