@@ -10,10 +10,6 @@
         "php": ">=7.1.0",
         "laravel/nova": "*"
     },
-    "require-dev": {
-      "orchestra/testbench": "^3.6",
-      "phpunit/phpunit": "7.1"
-    },
       "repositories": [
       {
         "type": "path",
