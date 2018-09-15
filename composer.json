@@ -1,15 +1,13 @@
 {
     "name": "richardkeep/nova-timenow",
     "description": "A Laravel Nova card.",
-    "version": "1.0.1",
     "keywords": [
         "laravel",
         "nova"
     ],
     "license": "MIT",
     "require": {
-        "php": ">=7.1.0",
-         "laravel/nova": "*"
+        "php": ">=7.1.0"
     },
     "autoload": {
         "psr-4": {
@@ -25,6 +23,5 @@
     },
     "config": {
         "sort-packages": true
-    },
-    "minimum-stability": "dev"
+    }
 }
