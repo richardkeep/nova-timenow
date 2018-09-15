@@ -1,0 +1,30 @@
+{
+    "name": "richardkeep/nova-timenow",
+    "description": "A Laravel Nova card.",
+    "version": "1.0.1",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Richardkeep\\NovaTimenow\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Richardkeep\\NovaTimenow\\TimenowServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
