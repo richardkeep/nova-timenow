@@ -50,7 +50,7 @@ public function cards()
         ])->defaultTimezone('Africa/Nairobi'),
     ];
 }
-
+```
 ## Usage
 
 The card will be automatically displayed on the dashboard. You can now select the timezone from the dropdown list of registered timezones to view the current time in that region,
