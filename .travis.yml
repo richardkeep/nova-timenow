@@ -1,6 +1,0 @@
-language: php
-
-sudo: false
-
-php:
-  - 7.2
