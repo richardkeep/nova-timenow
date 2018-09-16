@@ -26,6 +26,21 @@ public function cards()
 {
     return [
         // ...
+        new \Richardkeep\NovaTimenow\NovaTimenow,
+    ];
+}
+```
+
+##  Customization
+
+By default, the system's timezone and America\Mexico_City will be used as the list of timezones. To override this, please add more [valid timezones](https://momentjs.com/timezone/).
+
+```php
+
+public function cards()
+{
+    return [
+        // ...
         (new \Richardkeep\NovaTimenow\NovaTimenow)->timezones([
             'Africa/Nairobi',
             'America/Mexico_City',
@@ -35,7 +50,6 @@ public function cards()
         ])->defaultTimezone('Africa/Nairobi'),
     ];
 }
-```
 
 ## Usage
 
@@ -43,6 +57,4 @@ The card will be automatically displayed on the dashboard. You can now select th
 
 ## Credits
 
-This card is highly inspired by Chris's [Nova Clock Card](https://github.com/chris-ware/nova-clock-card) that does exact this, but with timezone selections and few tweaks.
-
-- [Chris Ware](https://github.com/chris-ware)
+This card is highly inspired by Chris Ware's [Nova Clock Card](https://github.com/chris-ware/nova-clock-card) that does exact this, but with timezone selections and few tweaks.
