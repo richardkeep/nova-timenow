@@ -23,8 +23,8 @@ class TimenowServiceProvider extends ServiceProvider
 
 
         Nova::serving(function() {
-            Nova::script('nova-timenow', __DIR__.'/../dist/js/card.js');
-            Nova::style('nova-timenow', __DIR__.'/../dist/css/card.css');
+            Nova::script('nova-timenow', __DIR__ . '/../dist/js/card.js');
+            Nova::style('nova-timenow', __DIR__ . '/../dist/css/card.css');
         });
     }
 
@@ -51,7 +51,6 @@ class TimenowServiceProvider extends ServiceProvider
 
         Route::middleware(['nova'])
                 ->prefix('nova-vendor/nova-timenow')
-                ->group(__DIR__.'/../routes/api.php');
+                ->group(__DIR__ . '/../routes/api.php');
     }
-
 }
