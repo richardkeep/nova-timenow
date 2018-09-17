@@ -3,7 +3,6 @@
 namespace Richardkeep\NovaTimenow;
 
 use Laravel\Nova\Nova;
-use Laravel\Nova\Events\ServingNova;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
@@ -20,10 +19,23 @@ class TimenowServiceProvider extends ServiceProvider
             $this->routes();
         });
 
+
+
+
         Nova::serving(function() {
             Nova::script('nova-timenow', __DIR__.'/../dist/js/card.js');
             Nova::style('nova-timenow', __DIR__.'/../dist/css/card.css');
         });
+    }
+
+    /**
+     * Register any application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
     }
 
     /**
@@ -42,13 +54,4 @@ class TimenowServiceProvider extends ServiceProvider
                 ->group(__DIR__.'/../routes/api.php');
     }
 
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        //
-    }
 }

@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
 Route::get('/endpoint', function (Request $request) {
     return [];
 });
