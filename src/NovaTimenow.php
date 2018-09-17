@@ -19,8 +19,7 @@ class NovaTimenow extends Card
             'dateFormat'        => 'dddd, MMMM Do YYYY',
             'defaultTimezone'   => config('app.timezone'),
             'timeFormat'        => 'LTS',
-
-            'locale'            =>  config('app.locale'),
+            'locale'            => config('app.locale'),
             'timezones'         => [config('app.timezone'), 'America/Mexico_City']
         ]);
     }
