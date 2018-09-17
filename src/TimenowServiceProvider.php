@@ -19,10 +19,7 @@ class TimenowServiceProvider extends ServiceProvider
             $this->routes();
         });
 
-
-
-
-        Nova::serving(function() {
+        Nova::serving(function () {
             Nova::script('nova-timenow', __DIR__ . '/../dist/js/card.js');
             Nova::style('nova-timenow', __DIR__ . '/../dist/css/card.css');
         });
