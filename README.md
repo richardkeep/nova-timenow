@@ -1,6 +1,7 @@
 # Nova Time Now
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/richardkeep/nova-timenow.svg?style=flat-square)](https://packagist.org/packages/richardkeep/nova-timenow)
+[![Style CI](https://styleci.io/repos/148930957/shield?branch=master)](https://styleci.io/repos/148930957)
 [![Total Downloads](https://img.shields.io/packagist/dt/richardkeep/nova-timenow.svg?style=flat-square)](https://packagist.org/packages/richardkeep/nova-timenow)
 
 A Laravel Nova card to display the current time from different timezones in the world.
