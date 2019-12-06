@@ -1,16 +1,23 @@
-elanguage: php
-
+language: php
 php:
-  - "7.2"
-
-before_script:
-  - mysql -e 'create database homestead_test;'
-  - composer self-update
-  - composer install --no-interaction
-  - php artisan key:generate
-
-services:
-  - mysql
-
+- '7.3'
+- '7.4'
 script:
 - vendor/bin/phpunit
+env:
+  global:
+  - secure: JZ1NzWr0D3WEE1EEjGUtr8pK1afGV/DDjUBYXP1LcW98JK5JMt9D26/pRk4x1+cK7p8CYfQOkpS6oCxUUcVeyKFCqY5GP+3gOfPqjGH43dTk8AoHDiYuIGkeJFNPzbt8krJnBL0Sf+dI1Lhfvy/1SIw8kJRrD4dHLkuXEPodegXBTSPvjxSMgVUXuHIckBUScSiyXOGoNaTZmMhkrqH1HIv9loXJ2ZxlwefjpDdXNyTcIErQbI5PnrSrs56kFdwoRXmQz2/RTS8YAU310ugOpN+0NyL79ghiSUhl0F4hwNPYesgVWBc40N6hf/5XMCui9n8PN5jfjb0aZYkUQWhqYt62jugUgoMiTi8nzgFpb8Uhmekzlo9R8/A3omZ4qDfv37ioMeqb3QpSYSNuxpKFmjIp9duatTxP+hvQs0rjFtzCTst0cYUbFYae/7zY8sSw7Kh2ePwXGXVN8NftHf4sWpC/FVnAk7UaOIYbxk2hd+jU+pc6+d008u2b2JPRMiVoXyflTXgrL4eTTZPQnOgcSBN54yJlp8IM2hDe7PWC8sfqBOmwfXA/2ovXaKcjhFjeZnyU/AwpZSqgiMA5bsPpPO1gPtprB2G1Dr3p7iFU4Vx2OL4GibICIirWBXKKHzXooUHDpsYnfhcBBse8NB1YcIFTunM/boZKnssKa8RAiIM=
+  - secure: uMvWUin178V8IUYnXenoQLqpEyNb3SEODO0HKmpYpdWiPDGLGLM+35qY8bKradvoOjdBnTQ0Q2bsBkKmRUVIaEGU1WlFLF8npu4L5pMsFVgWfM2kTxMYmfVgf9YhCWdJVXYlQcLRGjNOdA04X28/pPozoaL7D5yMQB2GlivPv3ZLzjyTQgczgzveDf9unBA/HNKH/rrI6oDlZ6h3sseI2RI8YqL2/H2CBkHHUxHMcaR8LmhxbzHeBTx2qub8BMIF7WKJq6DU59+w/bcKBz0wPl95bsge2h/gfVU2S5Og3Jv+EJlu5Snz/LD+mLbUwZrkCkL2L7X4QInGHic3r/8qdaqOeGjJlSgBKS8B6w/YH08ZM9gzeDAj+JFLqDZiUA5r2/MFzNUZvXam7dS7nQg6Prpkwb3n3rk/DHsIw5/3WxuaC+iCfmCxAjlpV/Fii+GGB2Pvg05xX4K/S9akDMz1FHof3qSGaUO1fFOwQIMT9dsnBoxj3HaphNn28HbG8GvtxhNu2/y6Sy4pS4G56wmWRY8UzYnLOdv7t9SFYVdBkQb0L+nyvymCmF7KP/wR+kyBd6ff2SFHt1oUvmSbA0ouVZc3mFclVTAmH+xS/udGVaRY7WSnv6qklY/kBBM6J5dcw3A1BOKsv5e7xWdEUchQAEAHZKq1ognjDAK9CfX4lsI=
+install:
+- echo "{\"http-basic\":{\"nova.laravel.com\":{\"username\":\"${NOVA_USERNAME}\",\"password\":\"${NOVA_PASSWORD}\"}}}" > auth.json
+
+before_script:
+- travis_retry composer self-update
+- travis_retry composer install --no-interaction
+- php artisan key:generate
+
+script:
+- vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
+
+after_script:
+- php vendor/bin/ocular code-coverage:upload --format=php-clover coverage.clover
