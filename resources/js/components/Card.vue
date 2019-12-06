@@ -1,9 +1,9 @@
 <template>
-    <card class="flex flex-col items-center justify-center">
+    <card class="relative px-6 py-4">
         <div class="flex mb-4">
             <h3 class="mr-3 text-base text-80 font-bold">Time Now</h3>
-            <select v-model="currentTimezone" class="ml-auto min-w-24 h-6 text-xs no-appearance bg-40">
-                <option v-for="timezone in card.timezones" :value="timezone">{{ timezone }}</option>
+            <select v-model="currentTimezone" class="select-box-sm ml-auto min-w-24 h-6 text-xs appearance-none bg-40 pl-2 pr-6 active:outline-none active:shadow-outline focus:outline-none focus:shadow-outline">
+                <option v-for="timezone in card.timezones" :value="timezone" :key="timezone">{{ timezone }}</option>
             </select>
         </div>
 
