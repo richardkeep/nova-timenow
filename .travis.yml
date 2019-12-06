@@ -15,9 +15,7 @@ install:
 - echo "{\"http-basic\":{\"nova.laravel.com\":{\"username\":\"${NOVA_USERNAME}\",\"password\":\"${NOVA_PASSWORD}\"}}}" > auth.json
 
 before_script:
-- travis_retry composer self-update
 - travis_retry composer install --no-interaction
-- php artisan key:generate
 
 script:
 - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
