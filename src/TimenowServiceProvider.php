@@ -2,9 +2,9 @@
 
 namespace Richardkeep\NovaTimenow;
 
-use Laravel\Nova\Nova;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Nova\Nova;
 
 class TimenowServiceProvider extends ServiceProvider
 {
