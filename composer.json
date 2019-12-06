@@ -24,8 +24,8 @@
     },
       "repositories": [
       {
-        "type": "path",
-        "url": "../nova"
+        "type": "composer",
+        "url": "https://nova.laravel.com"
       }
     ],
     "autoload": {
