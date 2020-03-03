@@ -56,6 +56,3 @@ public function cards()
 
 The card will be automatically displayed on the dashboard. You can now select the timezone from the dropdown list of registered timezones to view the current time in that region,
 
-## Credits
-
-This card is highly inspired by Chris Ware's [Nova Clock Card](https://github.com/chris-ware/nova-clock-card) that does exact this, but with timezone selections and few tweaks.
