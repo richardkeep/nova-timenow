@@ -7,7 +7,7 @@
                     Time Now
                 </span>
             </h3>
-            <select v-model="currentTimezone" class="select-box-sm ml-auto min-w-24 h-6 text-xs appearance-none bg-gray-200 px-4 active:outline-none active:shadow-outline focus:outline-none focus:shadow-outline">
+            <select v-model="currentTimezone" class="select-box-sm ml-auto min-w-24 h-6 text-xs appearance-none bg-gray-200 px-4 active:outline-none active:shadow-outline focus:outline-none focus:shadow-outline dark:bg-gray-700">
                 <option v-for="timezone in card.timezones" :value="timezone" :key="timezone">{{ timezone }}</option>
             </select>
         </div>
