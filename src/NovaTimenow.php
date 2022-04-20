@@ -18,7 +18,7 @@ class NovaTimenow extends Card
         Nova::script('nova-timenow', __DIR__.'/../dist/js/card.js');
     }
 
-   public function __construct()
+    public function __construct()
     {
         return $this->withMeta([
             'dateFormat'        => 'dddd, MMMM Do YYYY',
