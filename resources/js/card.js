@@ -1,3 +1,5 @@
-Nova.booting((Vue, router) => {
-    Vue.component('nova-timenow', require('./components/Card'));
+import Card from './components/Card'
+
+Nova.booting((app, store) => {
+  app.component('nova-timenow', Card)
 })

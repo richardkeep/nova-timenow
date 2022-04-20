@@ -1,6 +1,9 @@
 let mix = require('laravel-mix')
 
-mix.setPublicPath('dist')
+require('./mix')
 
-mix.js('resources/js/card.js', 'dist/js')
-   .sass('resources/sass/card.scss', 'dist/css')
+mix
+  .setPublicPath('dist')
+  .js('resources/js/card.js', 'js')
+  .vue({ version: 3 })
+  .nova('richardkeep/nova-timenow')
