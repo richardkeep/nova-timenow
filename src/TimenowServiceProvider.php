@@ -50,5 +50,4 @@ class TimenowServiceProvider extends ServiceProvider
                 ->prefix('nova-vendor/nova-timenow')
                 ->group(__DIR__.'/../routes/api.php');
     }
-
 }
