@@ -63,5 +63,4 @@ class NovaTimenow extends Card
     {
         return 'nova-timenow';
     }
-
 }
